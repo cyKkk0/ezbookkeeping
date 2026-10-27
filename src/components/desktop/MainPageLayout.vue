@@ -55,6 +55,25 @@
                                     </v-btn>
                                 </router-link>
 
+                                <router-link to="/transaction/classify"
+                                             :aria-current="isTopNavigationActive('/transaction/classify') ? 'page' : undefined">
+                                    <v-btn class="top-navigation-button ms-1" density="comfortable" variant="text"
+                                           :aria-label="tt('Transaction Classification')" :icon="true"
+                                           :active="isTopNavigationActive('/transaction/classify')"
+                                           :color="isTopNavigationActive('/transaction/classify') ? 'primary' : 'default'">
+                                        <v-icon :icon="mdiTagMultipleOutline" size="24" />
+                                        <v-tooltip activator="parent">{{ tt('Transaction Classification') }}</v-tooltip>
+                                    </v-btn>
+                                </router-link>
+
+                                <a href="/billing/" :aria-label="tt('Upload Statements')">
+                                    <v-btn class="top-navigation-button ms-1" density="comfortable" variant="text"
+                                           :aria-label="tt('Upload Statements')" :icon="true">
+                                        <v-icon :icon="mdiFileUploadOutline" size="24" />
+                                        <v-tooltip activator="parent">{{ tt('Upload Statements') }}</v-tooltip>
+                                    </v-btn>
+                                </a>
+
                                 <router-link to="/statistics/transaction"
                                              :aria-current="isTopNavigationActive('/statistics/transaction') ? 'page' : undefined">
                                     <v-btn class="top-navigation-button ms-1" density="comfortable" variant="text"
@@ -206,6 +225,8 @@ import {
     mdiHomeOutline,
     mdiListBox,
     mdiListBoxOutline,
+    mdiTagMultipleOutline,
+    mdiFileUploadOutline,
     mdiCreditCard,
     mdiCreditCardOutline,
     mdiChartPie,

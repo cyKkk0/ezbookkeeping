@@ -165,3 +165,7 @@ ezbookkeeping
 /data/
 /storage/
 /log/
+
+# Private runtime and migration packages
+/local-runtime/
+/server-packages/

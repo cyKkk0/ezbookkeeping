@@ -14,6 +14,7 @@ import UnlockPage from '@/views/desktop/UnlockPage.vue';
 import HomePage from '@/views/desktop/HomePage.vue';
 
 import TransactionListPage from '@/views/desktop/transactions/ListPage.vue';
+import TransactionClassificationPage from '@/views/desktop/transactions/ClassificationPage.vue';
 
 import StatisticsTransactionPage from '@/views/desktop/statistics/TransactionPage.vue';
 
@@ -105,6 +106,11 @@ const router = createRouter({
         {
             path: '/',
             component: HomePage,
+            beforeEnter: checkLogin
+        },
+        {
+            path: '/transaction/classify',
+            component: TransactionClassificationPage,
             beforeEnter: checkLogin
         },
         {
